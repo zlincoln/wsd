@@ -16,22 +16,57 @@
     *zoom: 1;
 }
 
+//palette
+@text-gray: #3A3C40;
+
+
 //globals
 html{
-	background: black;
+	background: black url(../images/bg.png) repeat left top;
+	font-family: 'Open Sans', sans-serif;
+	color: @text-gray;
 	body{
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		padding: 20px;
 		width: 960px;
 		margin: 0 auto;
-		background: white;
-		padding: 10px 20px;
+		padding: 20px;
+		background: rgba(255,255,255,.4);
+	}
+	h1,h2,h3,h4,h5{
+		font-family: 'Julius Sans One', sans-serif;
+		text-shadow: 0px 0px 8px rgba(153,20,232,.1);
 	}
 	h1{
 		font-size: 2.4em;
 	}
+}
+
+header{
+	a.logo{
+		display: block;
+	}
+	nav#header-nav{
+		ul{
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			li{
+				float: left;
+				a{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+div.hero{
+	background: white url(../images/me.png) right bottom no-repeat;
+	min-height: 280px;
+	padding: 0 20px;
+
 }
 
 section#recommendations{
@@ -43,8 +78,11 @@ section#recommendations{
 		float: left;
 		article{
 			margin-bottom: 20px;
-			padding-bottom: 20px;
-			border-bottom: 1px solid rgba(0,0,0,.4);
+			padding: 20px;
+			background: rgba(255,255,255,.4);
+		  -webkit-border-radius: 4px; 
+		  -moz-border-radius: 4px; 
+		  border-radius: 4px; 
 			h1{
 				margin-top: 0px;
 			}
