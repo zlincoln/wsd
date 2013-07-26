@@ -33,19 +33,26 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#187fff', endColorstr='#156bff',GradientType=0 ); /* IE6-9 */
 }
 
+img{
+	max-width: 100%;
+}
+
 
 //globals
 html{
-	background: black url(../images/bg.png) repeat left top;
+	background: @text-gray url(../images/bg.png) repeat left top;
 	font-family: 'Open Sans', sans-serif;
 	color: @text-gray;
+	font-size: 16px;
 	body{
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		width: 960px;
+		width: 90%;
+		max-width: 1280px;
+		font-size: 1em;
 		margin: 0 auto;
-		padding: 20px;
+		padding: percentage(20/1280);
 		background: rgba(255,255,255,.4);
 	}
 	h1,h2,h3,h4,h5{
@@ -67,7 +74,7 @@ html{
 		text-decoration: none;
 		font-size: 1.4em;
 		display: inline-block;
-		padding: 8px 30px;
+		padding: 8px percentage(30/400);
 		-webkit-border-radius: 4px; 
 	  -moz-border-radius: 4px; 
 	  border-radius: 4px; 
@@ -85,23 +92,26 @@ header{
 	nav#header-nav{
 		ul{
 			list-style-type: none;
-			margin: 0 0 20px 0;
-			padding: 0px;
+			margin: 0 0 percentage(20/1280) 0;
+			padding: 0;
 			display: block;
-			padding: 10px 20px;
+			padding: 10px percentage(20/1280);
 			background: @purp;
 			li{
 				float: left;
-				margin-left: 20px;
+				margin-left: percentage(20/1240);
 				&:first-child{
-					margin-left: 0px;
+					margin-left: 0;
 				}
 				a{
 					display: block;
 					text-decoration: none;
-					padding: 4px 12px;
+					padding: 10px percentage(12/300);
 					background: white;
 					color: @purp;
+					-webkit-border-radius: 4px; 
+				  -moz-border-radius: 4px; 
+				  border-radius: 4px; 
 					&:hover{
 						.blue-gradient;
 						color: white;
@@ -119,10 +129,10 @@ footer{
 			list-style-type: none;
 			background: rgba(255,255,255,.4);
 			display: block;
-			padding: 10px 20px;
+			padding: 10px percentage(20/1280);
 			li{
 				float: left;
-				margin-left: 20px;
+				margin-left: percentage(20/1240);
 				&:first-child{
 					margin-left: 0px;
 				}
@@ -137,10 +147,10 @@ footer{
 div.hero{
 	background: white url(../images/me.png) right bottom no-repeat;
 	min-height: 200px;
-	padding: 40px 20px;
+	padding: 40px percentage(20/1280);
 	margin-bottom: 20px;
 	h1{
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 }
 
@@ -152,14 +162,14 @@ section#recommendations{
 		width: 70%;
 		float: left;
 		article{
-			margin-bottom: 20px;
-			padding: 20px;
+			margin-bottom: percentage(20/1000);
+			padding: 20px percentage(20/620);
 			background: rgba(255,255,255,.4);
 		  -webkit-border-radius: 4px; 
 		  -moz-border-radius: 4px; 
 		  border-radius: 4px; 
 			h1{
-				margin-top: 0px;
+				margin-top: 0;
 			}
 		}
 	}
@@ -169,7 +179,7 @@ section#recommendations{
 		box-sizing: border-box;
 		width: 30%;
 		float: left;
-		padding: 0px 20px;
+		padding: 0px percentage(20/460);
 	}
 	img{
 		max-width: 100%;
@@ -179,8 +189,8 @@ section#recommendations{
 
 section#portfolio-gallery{
 	ul.gallery{
-		margin: 0px;
-		padding: 0px;
+		margin: 0;
+		padding: 0;
 		list-style-type: none;
 		display: block;
 		li{
@@ -194,7 +204,70 @@ section#portfolio-gallery{
 				padding-left: 0px;
 			}
 			img{
-				max-width: 100%
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media(max-width: 959px){
+
+}
+
+@media(max-width: 767px){
+	html body{
+		font-size: 1.1em;
+	}
+	header nav#header-nav ul li, footer #footer-nav ul li{
+		width: 100%;
+		display: block;
+		margin: 5px 0;
+		a{
+			text-align: center;
+			padding: 5px 0;
+		}
+	}
+	div.hero{
+		h1, h2{
+			width: 50%;
+		}
+	}
+	section#recommendations{
+		div.article-wrap{
+			width: 100%;
+		}
+		aside#about-me{
+			width: 100%;
+		}
+	}
+}
+
+@media(max-width: 480px){
+	html{
+		background-image: none;
+		body{
+			font-size: 1.3em;
+		}
+	}
+	div.hero{
+		background-image: none;
+		h1, h2{
+			width: 100%;
+		}
+	}
+	section#portfolio-gallery{
+		ul.gallery{
+			li{
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				float: left;
+				width: 100%;
+				padding-left: 0;
+				margin-bottom: 10px;
+				img{
+					max-width: 100%;
+				}
 			}
 		}
 	}
