@@ -20,7 +20,7 @@
 		</header>
 		<div id="main-content">
 			<section class="contact-form">
-				<h1>Direct Communication</h1>
+				<h1>Email Me</h1>
 				<p>Please feel free to contact me in order to discuss any web projects you need completed or questions you might have as a developer.  I'll respond as soon as possible, typically during the first available slot after your submission.  See my available slots below:</p>
 				<table class="availability-calendar">
 					<thead>
@@ -57,6 +57,18 @@
 						<div class="controls">
 							<input type="email" class="text" id="contact-email" name="contact-name" placeholder="youremail@example.com">
 						</div>	
+					</div>
+
+					<div class="control-group clearfix">
+						<label for="contact-type">Regarding</label>
+						<div class="controls">
+							<select id="contact-type" class="select" name="contact-type">
+								<option value="didnt-specify" selected="selected">-- Please Select --</option>
+								<option value="dev-question">Developer Question</option>
+								<option value="client-work">Potential Client Work</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
 					</div>
 
 					<div class="control-group clearfix">

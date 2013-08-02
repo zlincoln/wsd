@@ -310,7 +310,8 @@ section.contact-form form div.control-group div.controls {
   float: left;
 }
 section.contact-form form div.control-group div.controls input.text,
-section.contact-form form div.control-group div.controls textarea {
+section.contact-form form div.control-group div.controls textarea,
+section.contact-form form div.control-group div.controls select {
   width: 98%;
   padding: 4px 1%;
   border: none;
@@ -318,6 +319,9 @@ section.contact-form form div.control-group div.controls textarea {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+section.contact-form form div.control-group div.controls select {
+  width: 100%;
 }
 section.contact-form form input.submit.btn {
   float: right;
