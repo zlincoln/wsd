@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My First Site!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/master.css">
+	</head>
+	<body>
+		<header>
+			<a href="index.html" class="logo"><img src="images/logo.png" alt="Zachary Lincoln's Logo"></a>
+			<nav id="header-nav">
+				<ul class="clearfix">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="blog.html">Recommendations</a></li>
+					<li><a href="contact-me.html" class="current">Contact Me</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="main-content">
+			<section class="contact-form">
+				<h1>Direct Communication</h1>
+				<p>Please feel free to contact me in order to discuss any web projects you need completed or questions you might have as a developer.  I'll respond as soon as possible, typically during the first available slot after your submission.  See my available slots below:</p>
+				<table class="availability-calendar">
+					<thead>
+						<tr>
+							<th>Day</th>
+							<th>Available Time Slots</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Monday - Friday</td>
+							<td>6pm to 8pm</td>
+						</tr>
+						<tr>
+							<td>Saturday</td>
+							<td>11am to 2pm</td>
+						</tr>
+						<tr>
+							<td>Sunday</td>
+							<td>Not available!</td>
+						</tr>
+					</tbody>
+				</table>
+				<form action="thank-you.html" method="post" class="clearfix">
+					<div class="control-group clearfix">
+						<label for="contact-name">Name</label>
+						<div class="controls">
+							<input type="text" class="text" id="contact-name" name="contact-name" placeholder="John Smith">
+						</div>	
+					</div>
+
+					<div class="control-group clearfix">
+						<label for="contact-email">Email</label>
+						<div class="controls">
+							<input type="email" class="text" id="contact-email" name="contact-name" placeholder="youremail@example.com">
+						</div>	
+					</div>
+
+					<div class="control-group clearfix">
+						<label for="contact-message">Message</label>
+						<div class="controls">
+							<textarea class="textarea" id="contact-message" name="contact-message" placeholder="Your question here!" rows="5"></textarea>
+						</div>
+					</div>
+
+					<input type="submit" class="submit btn" value="Send">
+				</form>
+			</section>
+			<footer>
+				<nav id="footer-nav">
+					<ul class="clearfix">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contact-me.html">Contact Me</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+	</body>
+</html>
